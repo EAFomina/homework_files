@@ -20,7 +20,7 @@ def get_shop_list_by_dishes(dishes, person_count):
             measure = ingredient.get('measure')
             quantity = ingredient.get('quantity') * person_count
             if ingredient_name in shop_list:
-                first_quantity = shop_list.get(ingredient_name).get('quantity')
+                first_quantity = (shop_list.get(ingredient_name)).get('quantity')
                 shop_list[ingredient_name] = {'measure': measure, 'quantity': first_quantity + quantity}
             else:
                 shop_list[ingredient_name] = {'measure': measure, 'quantity': quantity}
